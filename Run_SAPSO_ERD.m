@@ -3,12 +3,12 @@ time_begin = tic;
 warning('off');
 
 % ===================== 实验参数 =====================
-D = 500;          % 维度: 30 / 50 / 100
-mf = 1000;       % 最大真实函数评估次数
-runs = 1;        % 独立运行次数
-sn1 = 1;         % 收敛曲线采样间隔
-pop_size = 100;  % 种群规模
-base_seed = [];  % 随机种子 (空 = 不固定)
+D = 500;          
+mf = 1000;       
+runs = 1;        
+sn1 = 1;         
+pop_size = 100;  
+base_seed = [];  
 
 % 基准函数: 1-Ackley, 2-Griewank, 3-Rosenbrock, 4-Ellipsoid, 5-Rastrigin,
 %           6-CEC05_f10, 7-CEC05_f19
@@ -60,13 +60,13 @@ gs_config.jump_sigma = 0.20;
 % ===================== 搜索策略配置 =====================
 % 仅保留核心策略，其余使用 SAPSO_ERD.m 中的默认值
 search_config = struct();
-search_config.enable_confidence_allocation = true;      % 策略3: 置信度分配
-search_config.enable_msm_representative_replace = true; % 核心策略1: MSM代表替换
-search_config.enable_batch_decorrelation = true;        % 策略2: K-means++批量去相关
+search_config.enable_confidence_allocation = true;     
+search_config.enable_msm_representative_replace = true; 
+search_config.enable_batch_decorrelation = true;
 search_config.batch_diversity_mode = 'kmeanspp';
-search_config.enable_uncertainty_infill = true;         % 策略4: 不确定性填充
-search_config.enable_hierarchical_surrogate = true;     % 层次代理模型
-search_config.enable_hybrid_gpr_rbf = true;             % 混合 GPR-RBF 代理
+search_config.enable_uncertainty_infill = true;         
+search_config.enable_hierarchical_surrogate = true;     
+search_config.enable_hybrid_gpr_rbf = false;            
 search_config.verbose = true;
 search_config.verbose_iter_interval = 1;
 
