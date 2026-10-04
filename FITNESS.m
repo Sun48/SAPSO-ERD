@@ -1,16 +1,3 @@
-%%%*********************************************************************************************%%%
-%% Benchmark functions for SAPSO-ERD
-%% H. Yu, Y. Tan, J. Zeng, C. Sun, Y. Jin, Surrogate-assisted hierarchical 
-%% particle swarm optimization, Information Sciences, 454-455 (2018) 59-72.
-%%%*********************************************************************************************%%%
-%% This paper and this code should be referenced whenever they are used to 
-%% generate results for the user's own research. 
-%%%*********************************************************************************************%%%
-%% This matlab code was written by Haibo Yu
-%% Please refer with all questions, comments, bug reports, etc. to tyustyuhaibo@126.com
-% 
-%% Test functions for category: 'FITNESS'
-
 function [y] = FITNESS(xx, func_id)
 % FITNESS benchmark suite selector
 % func_id:

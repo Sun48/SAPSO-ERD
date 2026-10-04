@@ -1,12 +1,3 @@
-% ================ SL-PSO ======================================%%%%
-%%  R. Cheng, Y. Jin, A social learning particle swarm optimization 
-%%  algorithm for scalable optimization, Information Science. 291 (2015) 43�?60
-%%%==============================================================%%%%
-%% NOTE: This is not the original code of SL-PSO
-%%%**************************************************************%%%%
-%% This matlab code was modified by Haibo Yu
-%% Please refer with all questions, comments, bug reports, etc. to tyustyuhaibo@126.com
-% %
 function [best_pos,bestever] = SLPSO(d, maxgen,gmd,minerror,ghx,opts)
 %  disp('SLPSO global search');
 % e.g., d=20; maxfe=1000;
@@ -61,8 +52,8 @@ while(gen < maxgen)
     [bestever,id] = min([besty, bestever]);
     best_new = bestever;    
     if id == 1
-        best_pos = bestp;       % 更新后的�?优位�?
-        bestpos_new=best_pos;   % 当前代最优位�?
+        best_pos = bestp;       
+        bestpos_new=best_pos;   
     elseif id == 2
         best_pos = bestpos_old;
         bestpos_new=best_pos;
